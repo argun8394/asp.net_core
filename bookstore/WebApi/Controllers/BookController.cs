@@ -97,6 +97,21 @@ namespace WebApi.AddControllers{
             return Ok();
         }
 
+        //Delete 
+        [HttpDelete("{id}")]
+
+        public IActionResult DeleteBook(int id) //IActionResult döndürüyoruz,, silmek için bize id bilgisi yeterli
+        {
+            //nesnemizin datbase de mevcut olup olmadığı validasyon işlemi yapıyoruz
+            var book = BookList.SingleOrDefault(x=> x.Id == id);
+            if(book is null)
+                return BadRequest();
+
+            BookList.Remove(book);
+            return Ok();
+        }
+
+
         
     }
 }
