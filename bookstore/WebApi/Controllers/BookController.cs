@@ -78,6 +78,25 @@ namespace WebApi.AddControllers{
             BookList.Add(newBook);//mevcut değilse Ok() döndürülür.
             return Ok();// yani 200 code mesajı döner
         }
+
+        //Put
+        [HttpPut("{id}")] // hangi id üzerinden güncelleme yapacağımızı belirtmemiz lazım ve güncel değerleri göndermemiz gerekir
+        public IActionResult UpdateBook(int id, [FromBody] Book updateBook) //Book tipinde olacak yani Book tipinde olduğu için tüm nesneyi alıyoruz, update te IActionResult kullanılır
+        {
+            //book umuzun listemizde mevcut olup olmadığını kontrol etmemiz gerekiyor çünkü mevcut olan veri için güncelleme yapbiliriz. Bundan dolayı validasyon işlemi yapmamız gerekir.
+            var book = BookList.SingleOrDefault(x=> x.Id == id);// burada bir id de tek bir değer olacağından dolayı SingleOrDefault() kullanıyoruz
+
+            if(book is null)
+                return BadRequest();
+
+            book.GenreId = updateBook.GenreId != default ? updateBook.GenreId : book.GenreId; //Burada GenreId default değilse yani doldurulmuşsa GenreId yi updateBook.GenreId eşitle doldurulmamışsa book.GenreId ye eşitle yani kendi GenreId sini al.
+            book.PageCount = updateBook.PageCount != default ? updateBook.PageCount : book.PageCount;
+            book.PublishDate = updateBook.PublishDate != default ? updateBook.PublishDate : book.PublishDate;
+            book.Title = updateBook.Title != default ? updateBook.Title : book.Title;
+
+            return Ok();
+        }
+
         
     }
 }
