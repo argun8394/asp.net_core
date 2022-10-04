@@ -61,5 +61,23 @@ namespace WebApi.AddControllers{
         //      var book = BookList.Where(book => book.Id == Convert.ToInt32(id)).SingleOrDefault();//Id ye göre getiriyoruz 
         //      return book;
         //  }
+
+
+        //Post
+        [HttpPost]
+        //request body alır kodumuz, parametre değil.
+        //try it out üzerinden request body yi doldurabiliriz ve get ile tüm veriyi çağırdığımızda post ile girilen veriyi gözlemleyebiliriz.
+        public IActionResult AddBook([FromBody] Book newBook)
+        {
+            var book = BookList.SingleOrDefault(x=> x.Title == newBook.Title); //burada eklenecek kitabın mevcut olup olmadığını Title üzerinden validasyon işlemi yapıyoruz
+
+            //if(book != null)//kitap mevcutsa hata döndürür
+            if(book is not null)
+                return BadRequest();
+
+            BookList.Add(newBook);//mevcut değilse Ok() döndürülür.
+            return Ok();// yani 200 code mesajı döner
+        }
+        
     }
 }

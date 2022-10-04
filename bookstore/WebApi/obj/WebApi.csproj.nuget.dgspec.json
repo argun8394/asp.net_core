@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "c:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\argun\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\argun\\Desktop\\softw\\GITHUB\\GITHUB\\asp.net_core\\bookstore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\argun\\AppData\\Roaming\\NuGet\\NuGet.Config"
